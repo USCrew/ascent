@@ -11,26 +11,38 @@ public class Climbing : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (Input.GetKey(Keycode.UpArrow))
-		{
-			Vector3 newVelocity = transform.localScale;
-			newScale.y = 1.0f;
+		Vector3 newVelocity = Vector3.zero;
 
-			transform.Position = newVelocity * Time.deltaTime * speed;
-		} 
-		else if (Input.GetKey(Keycode.RightArrow))
+
+
+
+		if (Input.GetKey(KeyCode.UpArrow))
 		{
-			Vector3 newVelocity = transform.localScale;
-			newScale.x = 1.0f;
-			
-			transform.Position = newVelocity * Time.deltaTime * speed;
-		} 
-		else if (Input.GetKey(Keycode.LeftArrow))
+			newVelocity.y = 7.0f;
+
+			transform.position += newVelocity * Time.deltaTime * speed;
+		}
+		else if (Input.GetKey(KeyCode.DownArrow))
 		{
-			Vector3 newVelocity = transform.localScale;
-			newScale.x = -1.0f;
+			newVelocity.y = -7.0f;
 			
-			transform.Position += newVelocity * Time.deltaTime * speed;
+			transform.position += newVelocity * Time.deltaTime * speed;
+		} 
+
+
+
+
+		if (Input.GetKey(KeyCode.RightArrow))
+		{
+			newVelocity.x = 7.0f;
+			
+			transform.position += newVelocity * Time.deltaTime * speed;
+		} 
+		else if (Input.GetKey(KeyCode.LeftArrow))
+		{
+			newVelocity.x = -7.0f;
+			
+			transform.position += newVelocity * Time.deltaTime * speed;
 		} 
 	}
 }
