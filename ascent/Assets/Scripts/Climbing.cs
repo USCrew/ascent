@@ -51,6 +51,6 @@ public class Climbing : MonoBehaviour {
 			transform.position += newVelocity * Time.deltaTime * speed;
 
 			rigidbody2D.AddForce(Vector3.left * horz_speed);
-		} 
+		}
 	}
 }

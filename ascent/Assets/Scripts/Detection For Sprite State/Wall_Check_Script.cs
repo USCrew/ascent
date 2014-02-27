@@ -18,9 +18,17 @@ public class Wall_Check_Script : MonoBehaviour {
 	}
 
 	
-	void OnCollisionEnter2D(Collision2D theCollision){
-		if(theCollision.gameObject.tag == "Wall"){
+	void OnTriggerEnter2D(Collider2D collision){
+		Debug.Log("Wallz");
+		if(collision.gameObject.tag == "Wall"){
 			climb_script.isClimbing = true;
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D collision){
+		Debug.Log("WallzX");
+		if(collision.tag == "Wall") {
+			climb_script.isClimbing = false;
 		}
 	}
 }
