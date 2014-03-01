@@ -9,7 +9,6 @@ public class Wall_Check_Script : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
@@ -18,17 +17,17 @@ public class Wall_Check_Script : MonoBehaviour {
 	}
 
 	
-	void OnTriggerEnter2D(Collider2D collision){
-		Debug.Log("Wallz");
+	void OnTriggerStay2D(Collider2D collision){
 		if(collision.gameObject.tag == "Wall"){
 			climb_script.isClimbing = true;
+			player.rigidbody2D.gravityScale = 0;
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D collision){
-		Debug.Log("WallzX");
 		if(collision.tag == "Wall") {
 			climb_script.isClimbing = false;
+			player.rigidbody2D.gravityScale = 1;
 		}
 	}
 }

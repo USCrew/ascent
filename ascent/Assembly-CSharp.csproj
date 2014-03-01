@@ -46,9 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Climbing.cs" />
-     <Compile Include="Assets\Scripts\Detection For Sprite State\Ground_Check_Script.cs" />
-     <Compile Include="Assets\Scripts\Detection For Sprite State\Wall_Check_Script.cs" />
+     <Compile Include="Assets\Scripts\C_Sharp\Climbing.cs" />
+     <Compile Include="Assets\Scripts\C_Sharp\Ground_Check_Script.cs" />
+     <Compile Include="Assets\Scripts\C_Sharp\Wall_Check_Script.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

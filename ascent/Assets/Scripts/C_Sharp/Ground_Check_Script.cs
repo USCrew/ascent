@@ -19,15 +19,13 @@ public class Ground_Check_Script : MonoBehaviour {
 
 	}
 	
-	void OnTriggerEnter2D(Collider2D collision){
-		Debug.Log("Collision");
+	void OnTriggerStay2D(Collider2D collision){
 		if(collision.gameObject.tag == "Wall"){
 			climb_script.isGrounded = true;
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D collision){
-		Debug.Log("CollisionX");
 		if(collision.tag == "Wall") {
 			climb_script.isGrounded = false;
 		}
