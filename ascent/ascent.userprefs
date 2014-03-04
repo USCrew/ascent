@@ -1,10 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\C_Sharp\Climbing.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\C_Sharp\DontDieOnMeNow.cs">
     <Files>
-      <File FileName="Assets\Scripts\C_Sharp\Ground_Check_Script.cs" Line="22" Column="45" />
-      <File FileName="Assets\Scripts\C_Sharp\Wall_Check_Script.cs" Line="4" Column="41" />
-      <File FileName="Assets\Scripts\C_Sharp\Climbing.cs" Line="51" Column="8" />
+      <File FileName="Assets\Scripts\C_Sharp\DontDieOnMeNow.cs" Line="15" Column="2" />
+      <File FileName="Assets\Scripts\C_Sharp\Ground_Check_Script.cs" Line="23" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
