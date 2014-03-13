@@ -4,6 +4,7 @@ using System.Collections;
 public class DontDieOnMeNow : MonoBehaviour {
 
 	public GameObject Player;
+	public Climbing climb_script;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +17,8 @@ public class DontDieOnMeNow : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collision){
-		Player.transform.localPosition = new Vector3(8, -25, 0);
+		Player.transform.localPosition = climb_script.getCurrentCheckpointPos();
+		Player.rigidbody2D.velocity = Vector3.zero;
 	}
 
 }

@@ -9,11 +9,13 @@ public class Climbing : MonoBehaviour {
 
 
 	//On Da Ground
-	private int vert_speed = 200;
+	private int vert_speed = 300;
 	private int horz_speed = 20;
 
 	//Climbing
-	private float climb_speed = 5f;
+	private float climb_speed = 15f;
+	public GameObject StartingCheckpoint;
+	private GameObject CurrentCheckpoint;
 
 	//State Checks
 	public bool isClimbing = false;
@@ -21,6 +23,9 @@ public class Climbing : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		setCurrentCheckpoint(StartingCheckpoint);
+
 	}
 
 	// Update is called once per frame
@@ -55,10 +60,6 @@ public class Climbing : MonoBehaviour {
 			} 
 		}
 
-
-
-
-
 		/**
 		 *Code Used For Moving Left and Right
 		 * Used Forces
@@ -71,5 +72,23 @@ public class Climbing : MonoBehaviour {
 		{
 			rigidbody2D.AddForce(Vector3.left * horz_speed);
 		}
+	}
+
+	public Vector3 getCurrentCheckpointPos()
+	{
+		return CurrentCheckpoint.transform.position;
+	}
+
+	public void setCurrentCheckpoint(GameObject newCurrent)
+	{
+		if(CurrentCheckpoint != null){
+			Checkpoint_Script deact=(Checkpoint_Script) CurrentCheckpoint.GetComponent(typeof(Checkpoint_Script));
+			
+			deact.deactivate();
+		}
+		CurrentCheckpoint = newCurrent;
+		Checkpoint_Script act=(Checkpoint_Script) CurrentCheckpoint.GetComponent(typeof(Checkpoint_Script));
+
+		act.activate();
 	}
 }
