@@ -76,7 +76,9 @@ public class Climbing : MonoBehaviour {
 
 	public Vector3 getCurrentCheckpointPos()
 	{
-		return CurrentCheckpoint.transform.position;
+		float rX = CurrentCheckpoint.transform.position.x;
+		float rY = CurrentCheckpoint.transform.position.y;
+		return new Vector3(rX, rY, 0f);
 	}
 
 	public void setCurrentCheckpoint(GameObject newCurrent)

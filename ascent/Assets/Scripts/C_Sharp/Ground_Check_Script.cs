@@ -20,13 +20,13 @@ public class Ground_Check_Script : MonoBehaviour {
 	}
 	
 	void OnTriggerStay2D(Collider2D collision){
-		if(collision.gameObject.tag == "Wall"){
+		if(collision.gameObject.tag == "Wall" || collision.tag == "DontClimb"){
 			climb_script.isGrounded = true;
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D collision){
-		if(collision.tag == "Wall") {
+		if(collision.tag == "Wall" ||collision.tag == "DontClimb" ) {
 			climb_script.isGrounded = false;
 		}
 	}
