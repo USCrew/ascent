@@ -43,6 +43,10 @@ public class Climbing : MonoBehaviour {
 		if (Input.GetKey(KeyCode.UpArrow) && (isClimbing || isGrounded))
 			{
 			if(isClimbing){	//Climb
+				if(rigidbody2D.velocity.y < 3)
+				{
+					rigidbody2D.velocity = new Vector3(0,3,0);
+				}
 				rigidbody2D.AddForce(Vector3.up * climb_speed);
 			}
 			else{	//Jump

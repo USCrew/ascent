@@ -1208,7 +1208,7 @@ public class Light2D : MonoBehaviour
             /*
             if (isShadowCaster)
                 UpdateMesh_RadialShadow();
-            else
+            else7
                 UpdateMesh_Radial();
             
             */
