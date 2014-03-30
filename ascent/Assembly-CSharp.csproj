@@ -62,11 +62,16 @@
     <Compile Include="Assets\Scripts\C_Sharp\Climbing.cs" />
     <Compile Include="Assets\Scripts\C_Sharp\DontDieOnMeNow.cs" />
     <Compile Include="Assets\Scripts\C_Sharp\Ground_Check_Script.cs" />
+    <Compile Include="Assets\Scripts\C_Sharp\MainMenuScrit.cs" />
     <Compile Include="Assets\Scripts\C_Sharp\PlayerLightManagerScript.cs" />
     <Compile Include="Assets\Scripts\C_Sharp\SpikeScript.cs" />
     <Compile Include="Assets\Scripts\C_Sharp\Wall_Check_Script.cs" />
+    <None Include="Assets\Main Menu Assets\Fonts\minecrafter\Read Me.txt" />
+    <None Include="Assets\Main Menu Assets\Fonts\visitor\visitor.txt" />
+    <None Include="Assets\Main Menu Assets\Fonts\minecraftia\readme.txt" />
     <None Include="Assets\2DVLS\Core\Shaders\2DVLS_Diffuse.shader" />
     <None Include="Assets\2DVLS\READ-ME.txt" />
+    <None Include="Assets\Main Menu Assets\Fonts\minecrafter\License.txt" />
     <None Include="Assets\2DVLS\Core\Shaders\2DVLS_Light.shader" />
     <None Include="Assets\2DVLS\Core\Shaders\2DVLS_Cutout.shader" />
     <None Include="Assets\2DVLS\Core\Shaders\2DVLS_Cutout %282-Sided%29.shader" />

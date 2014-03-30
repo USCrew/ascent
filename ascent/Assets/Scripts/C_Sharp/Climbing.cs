@@ -32,6 +32,29 @@ public class Climbing : MonoBehaviour {
 	void Update () {
 
 
+		if (Input.GetKey(KeyCode.Escape))
+		{
+			Application.LoadLevel("main_menu");
+		}
+
+		if (Input.GetKeyDown("p")){
+			if( Time.timeScale > 0)
+			{
+				Time.timeScale =0;
+			}
+			else Time.timeScale = 1;
+		}
+
+		if (Input.GetKeyDown("p")){
+			if( Time.timeScale > 0)
+			{
+				Time.timeScale =0;
+			}
+			else Time.timeScale = 1;
+		}
+
+		if (Time.timeScale>0)
+		{
 		if ((!Input.GetKey(KeyCode.UpArrow)&&!Input.GetKey(KeyCode.DownArrow)) && isClimbing){
 			rigidbody2D.velocity = Vector3.zero;
 		}
@@ -75,7 +98,9 @@ public class Climbing : MonoBehaviour {
 		else if (Input.GetKey(KeyCode.LeftArrow))
 		{
 			rigidbody2D.AddForce(Vector3.left * horz_speed);
+			}
 		}
+
 	}
 
 	public Vector3 getCurrentCheckpointPos()

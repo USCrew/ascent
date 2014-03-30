@@ -48,8 +48,12 @@
   <ItemGroup>
      <Compile Include="Assets\2DVLS\Core\Editor\Light2DEditor.cs" />
      <Compile Include="Assets\2DVLS\Core\Editor\Light2DMenu.cs" />
+     <None Include="Assets\Main Menu Assets\Fonts\minecrafter\Read Me.txt" />
+     <None Include="Assets\Main Menu Assets\Fonts\visitor\visitor.txt" />
+     <None Include="Assets\Main Menu Assets\Fonts\minecraftia\readme.txt" />
      <None Include="Assets\2DVLS\Core\Shaders\2DVLS_Diffuse.shader" />
      <None Include="Assets\2DVLS\READ-ME.txt" />
+     <None Include="Assets\Main Menu Assets\Fonts\minecrafter\License.txt" />
      <None Include="Assets\2DVLS\Core\Shaders\2DVLS_Cutout (2-Sided).shader" />
      <None Include="Assets\2DVLS\Core\Shaders\2DVLS_Light.shader" />
      <None Include="Assets\2DVLS\Core\Shaders\2DVLS_Diffuse (2-Sided).shader" />
