@@ -9,11 +9,11 @@ public class Climbing : MonoBehaviour {
 
 
 	//On Da Ground
-	private int vert_speed = 300;
+	private int vert_speed = 150;
 	private int horz_speed = 20;
 
 	//Climbing
-	private float climb_speed = 15f;
+	private float climb_speed = 10f;
 	public GameObject StartingCheckpoint;
 	private GameObject CurrentCheckpoint;
 

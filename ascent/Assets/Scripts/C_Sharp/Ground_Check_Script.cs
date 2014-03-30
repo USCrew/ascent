@@ -15,7 +15,12 @@ public class Ground_Check_Script : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = player.transform.position;
+		Vector3  poop = new Vector3(
+			player.transform.position.x,
+			player.transform.position.y - .3f,
+			player.transform.position.z
+			);
+		transform.position = poop;
 
 	}
 	
