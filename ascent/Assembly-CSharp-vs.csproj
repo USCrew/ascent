@@ -59,6 +59,7 @@
      <Compile Include="Assets\2DVLS\Samples\Scripts\SinMove_VLS.cs" />
      <Compile Include="Assets\2DVLS\Samples\Scripts\SinRotate_VLS.cs" />
      <Compile Include="Assets\2DVLS\Samples\Scripts\StressTest_VLS.cs" />
+     <Compile Include="Assets\MyUnitySingleton.cs" />
      <Compile Include="Assets\Scripts\C_Sharp\Checkpoint_Script.cs" />
      <Compile Include="Assets\Scripts\C_Sharp\Climbing.cs" />
      <Compile Include="Assets\Scripts\C_Sharp\DontDieOnMeNow.cs" />

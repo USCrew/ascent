@@ -1,11 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\Michael\Desktop\ascent\ascent\Assets\2DVLS\Core\Editor\Light2DEditor.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\C_Sharp\Climbing.cs">
     <Files>
-      <File FileName="Assets\Scripts\C_Sharp\Climbing.cs" Line="35" Column="3" />
-      <File FileName="Assets\Scripts\C_Sharp\MainMenuScrit.cs" Line="18" Column="39" />
-      <File FileName="c:\Users\Michael\Desktop\ascent\ascent\Assets\2DVLS\Core\Light2D.cs" Line="1202" Column="46" />
-      <File FileName="c:\Users\Michael\Desktop\ascent\ascent\Assets\2DVLS\Core\Editor\Light2DEditor.cs" Line="6" Column="22" />
+      <File FileName="Assets\Scripts\C_Sharp\Climbing.cs" Line="18" Column="23" />
+      <File FileName="Assets\Scripts\C_Sharp\Climbing.cs" Line="18" Column="23" />
+      <File FileName="Assets\Scripts\C_Sharp\MainMenuScrit.cs" Line="6" Column="9" />
+      <File FileName="c:\Users\Michael\Desktop\ascent\ascent\Assets\2DVLS\Core\Light2D.cs" Line="1205" Column="1" />
+      <File FileName="c:\Users\Michael\Desktop\ascent\ascent\Assets\2DVLS\Core\Editor\Light2DEditor.cs" Line="34" Column="49" />
+      <File FileName="Assets\MyUnitySingleton.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
