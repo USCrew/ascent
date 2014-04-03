@@ -6,13 +6,10 @@ public class End_Level_1 : MonoBehaviour {
 	public GameObject Green;
 	public GameObject Red;
 
-	public Queue<string> EndPoints;
+	public string next;
 
 	// Use this for initialization
 	void Start () {
-		EndPoints = new Queue<string>();
-		EndPoints.Enqueue("level_2");
-		EndPoints.Enqueue("level_3");
 	}
 	
 	// Update is called once per frame
@@ -31,7 +28,6 @@ public class End_Level_1 : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collision){
-		string current = EndPoints.Dequeue();
-		Application.LoadLevel(current);
+		Application.LoadLevel(next);
 	}
 }
