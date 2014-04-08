@@ -20,6 +20,7 @@ public class Climbing : MonoBehaviour {
 	//State Checks
 	public bool isClimbing = false;
 	public bool isGrounded = false;
+	public int  whichSide = 0;	//0 is no wall, 1 is left, 2 is right
 
 	//Animation
 	public Animator anim;
@@ -78,13 +79,11 @@ public class Climbing : MonoBehaviour {
 			if(!isGrounded && !isClimbing)
 			{
 				anim.SetInteger("State", 0);
-				//anim.Play("Idle", 1, .01f);
 			}
 
 		if(isGrounded && rigidbody2D.velocity.x < 1 && !isClimbing)
 			{
 				anim.SetInteger("State", 0);
-				//anim.Play("Idle", 1, .01f);
 			}
 
 			if(isClimbing && Mathf.Abs(rigidbody2D.velocity.y)>1)
@@ -105,15 +104,26 @@ public class Climbing : MonoBehaviour {
 		 */
 		if (Input.GetKey(KeyCode.UpArrow) && (isClimbing || isGrounded))
 			{
+
 			if(isClimbing){	//Climb
 				if(rigidbody2D.velocity.y < 3)
 				{
 					rigidbody2D.velocity = new Vector3(0,3,0);
 				}
 				rigidbody2D.AddForce(Vector3.up * climb_speed);
+					if(whichSide == 1){
+						anim.SetInteger("State", 3);
+					}
+					if(whichSide == 2){
+						anim.SetInteger("State", 6);
+					}
+					if(whichSide == 0){
+						anim.SetInteger("State", 0);	
+					}
 			}
+
 			else{	//Jump
-				rigidbody2D.AddForce(Vector3.up * vert_speed);
+				rigidbody2D.AddForce(Vector3.up * vert_speed * 1.3f);
 
 			}
 		}
