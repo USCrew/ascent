@@ -9,6 +9,7 @@ public class SpikeScript : MonoBehaviour {
 	public Sprite Blood2;
 	public Sprite Blood3;
 	private int count = 0;
+	public MetricManagerScript mms;
 	
 	
 	
@@ -23,22 +24,20 @@ public class SpikeScript : MonoBehaviour {
 	}
 	
 	void OnTriggerStay2D(Collider2D collision){
+
+		if ( count == 1){
+			GetComponent<SpriteRenderer>().sprite = Blood2;
+			count ++;
+		}
+		
+		if ( count == 0){
+			GetComponent<SpriteRenderer>().sprite = Blood1;
+			count ++;
+		}
+
 		Player.transform.localPosition = climb_script.getCurrentCheckpointPos();
 		Player.rigidbody2D.velocity = Vector3.zero;
-
-		
-		//if(tag == "spikes")
-		{	
-			if ( count == 1){
-				GetComponent<SpriteRenderer>().sprite = Blood2;
-				count ++;
-			}
-			
-			if ( count == 0){
-				GetComponent<SpriteRenderer>().sprite = Blood1;
-				count ++;
-			}
-		}
+		mms.AddToNumberDeaths();
 		
 	}
 	

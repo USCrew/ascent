@@ -12,7 +12,7 @@ public class MainMenuScrit : MonoBehaviour {
 	void Update () {
 
 		if (Input.GetKey(KeyCode.S)){
-			Application.LoadLevel("level_1");
+			Application.LoadLevel("Red");
 		}
 
 	

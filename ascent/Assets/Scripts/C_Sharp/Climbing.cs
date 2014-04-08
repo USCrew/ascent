@@ -86,27 +86,29 @@ public class Climbing : MonoBehaviour {
 				anim.SetInteger("State", 0);
 			}
 
-			if(isClimbing && Mathf.Abs(rigidbody2D.velocity.y)>1)
-			{
-				anim.SetInteger("State", 7);
-				//anim.Play("Climb_General", 1, .01f);
-			}
-
-			if(isClimbing && Mathf.Abs(rigidbody2D.velocity.y)<1)
-			{
-				anim.SetInteger("State", 0);
-				//anim.Play("Climb_General", 1, .01f);
-			}
-
 		/**
 		 *Code Used For Moving Up on Walls and Jumping
 		 * Used Forces for Jumps
 		 */
+
+		if (!Input.GetKey(KeyCode.UpArrow)
+			    || !Input.GetKey(KeyCode.DownArrow)
+			    && (isClimbing || isGrounded))
+			{
+					if(whichSide == 1){
+						anim.SetInteger("State", 2);
+					}
+					if(whichSide == 2){
+						anim.SetInteger("State", 5);
+					}
+			}
+
 		if (Input.GetKey(KeyCode.UpArrow) && (isClimbing || isGrounded))
 			{
 
 			if(isClimbing){	//Climb
-				if(rigidbody2D.velocity.y < 3)
+
+				 if(rigidbody2D.velocity.y < 3)
 				{
 					rigidbody2D.velocity = new Vector3(0,3,0);
 				}
@@ -117,9 +119,7 @@ public class Climbing : MonoBehaviour {
 					if(whichSide == 2){
 						anim.SetInteger("State", 6);
 					}
-					if(whichSide == 0){
-						anim.SetInteger("State", 0);	
-					}
+
 			}
 
 			else{	//Jump
@@ -134,6 +134,14 @@ public class Climbing : MonoBehaviour {
 		{
 			if(isClimbing){	//Climb
 				rigidbody2D.AddForce(Vector3.down * climb_speed);
+
+					if(whichSide == 1){
+						anim.SetInteger("State", 3);
+					}
+					if(whichSide == 2){
+						anim.SetInteger("State", 6);
+					}
+
 			} 
 		}
 
@@ -144,15 +152,20 @@ public class Climbing : MonoBehaviour {
 		if (Input.GetKey(KeyCode.RightArrow))
 		{
 			rigidbody2D.AddForce(Vector3.right * horz_speed);
+				//if(isGrounded)
+				if (!isClimbing)
 				anim.SetInteger("State", 4);
 
 		} 
 		else if (Input.GetKey(KeyCode.LeftArrow))
 		{
 			rigidbody2D.AddForce(Vector3.left * horz_speed);
+				//if(isGrounded)
+				if (!isClimbing)
 				anim.SetInteger("State", 1);
 			}
 		}
+
 
 	}
 
