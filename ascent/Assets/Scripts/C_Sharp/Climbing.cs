@@ -103,7 +103,7 @@ public class Climbing : MonoBehaviour {
 					}
 			}
 
-		if (Input.GetKey(KeyCode.UpArrow) && (isClimbing || isGrounded))
+			if (Input.GetKey(KeyCode.UpArrow) && (isClimbing || isGrounded))
 			{
 
 			if(isClimbing){	//Climb
