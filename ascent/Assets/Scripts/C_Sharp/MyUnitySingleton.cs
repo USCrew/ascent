@@ -17,5 +17,11 @@ public class MyUnitySingleton : MonoBehaviour {
 		DontDestroyOnLoad(this.gameObject);
 	}
 
+
+	void Update(){
+		if (Input.GetKey(KeyCode.Escape))
+			Application.Quit();
+	}
+
 	// any other methods you need
 }
