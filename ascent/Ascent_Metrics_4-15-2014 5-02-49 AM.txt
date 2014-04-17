@@ -1,0 +1,3 @@
+Current level: Blue
+Total time to finish level: 16.6404
+Number of deaths by player: 2

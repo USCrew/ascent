@@ -108,9 +108,9 @@ public class Climbing : MonoBehaviour {
 
 			if(isClimbing){	//Climb
 
-				 if(rigidbody2D.velocity.y < 3)
+				 if(rigidbody2D.velocity.y < 6)
 				{
-					rigidbody2D.velocity = new Vector3(0,3,0);
+					rigidbody2D.velocity = new Vector3(0,6,0);
 				}
 				rigidbody2D.AddForce(Vector3.up * climb_speed);
 					if(whichSide == 1){
@@ -132,6 +132,10 @@ public class Climbing : MonoBehaviour {
 		 */
 		else if (Input.GetKey(KeyCode.DownArrow))
 		{
+				if(rigidbody2D.velocity.y < -6)
+				{
+					rigidbody2D.velocity = new Vector3(0,-6,0);
+				}
 			if(isClimbing){	//Climb
 				rigidbody2D.AddForce(Vector3.down * climb_speed);
 

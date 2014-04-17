@@ -1,0 +1,3 @@
+Current level: Green
+Total time to finish level: 54.08546
+Number of deaths by player: 1

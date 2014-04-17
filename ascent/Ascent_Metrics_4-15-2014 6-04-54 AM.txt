@@ -1,0 +1,3 @@
+Current level: Yellow
+Total time to finish level: 33.82861
+Number of deaths by player: 3
