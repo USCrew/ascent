@@ -1,10 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\C_Sharp\Climbing.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/C_Sharp/Climbing.cs">
     <Files>
-      <File FileName="Assets\Scripts\C_Sharp\Climbing.cs" Line="137" Column="44" />
-      <File FileName="c:\Users\Michael\Desktop\ascent\ascent\Assets\2DVLS\Core\Light2D.cs" Line="1215" Column="10" />
-      <File FileName="c:\Users\Michael\Desktop\ascent\ascent\Assets\2DVLS\Core\Editor\Light2DEditor.cs" Line="122" Column="39" />
+      <File FileName="Assets/Scripts/C_Sharp/Climbing.cs" Line="163" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,0 +1,3 @@
+Current level: Red
+Total time to finish level: 72.22746
+Number of deaths by player: 2

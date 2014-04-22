@@ -7,7 +7,8 @@ public class Left_Script : MonoBehaviour {
 	public Climbing climb_script;
 
 	// Use this for initialization
-	void Update () {
+	void Update () 
+	{
 		Vector3  poop = new Vector3(
 			player.transform.position.x,
 			player.transform.position.y,
@@ -16,14 +17,18 @@ public class Left_Script : MonoBehaviour {
 		transform.position = poop;
 	}
 	
-	void OnTriggerStay2D(Collider2D collision){
-		if(collision.gameObject.tag == "Wall"){
+	void OnTriggerStay2D(Collider2D collision)
+	{
+		if(collision.gameObject.tag == "Wall")
+		{
 			climb_script.whichSide = 1;
 		}
 	}
 	
-	void OnTriggerExit2D(Collider2D collision){
-		if(collision.tag == "Wall") {
+	void OnTriggerExit2D(Collider2D collision)
+	{
+		if(collision.tag == "Wall") 
+		{
 			climb_script.whichSide = 0;
 		}
 	}

@@ -12,11 +12,13 @@ public class MetricManagerScript : MonoBehaviour {
 
 	bool playing = false;
 	
-	void Start () {
+	void Start () 
+	{
 		playing = true;
 	}
 
-	void Update () {
+	void Update () 
+	{
 		if(playing == true) elapsedTime += Time.deltaTime;
 	}
 	
@@ -32,7 +34,8 @@ public class MetricManagerScript : MonoBehaviour {
 		//In Standalone, this will show up in the same directory as your executable
 	}
 	
-	void GenerateMetricsString(){
+	void GenerateMetricsString()
+	{
 		createText = 
 			"Current level: " + Application.loadedLevelName + "\n" +
 				"Total time to finish level: " + elapsedTime + "\n" +
@@ -40,11 +43,13 @@ public class MetricManagerScript : MonoBehaviour {
 	}
 	
 	//Add to your set metrics from other classes whenever you want
-	public void AddToNumberDeaths(){
+	public void AddToNumberDeaths()
+	{
 		numberDeaths++;
 	}
 
-	void OnTriggerEnter2D(Collider2D collision){
+	void OnTriggerEnter2D(Collider2D collision)
+	{
 		playing = false;
 		OnLevelEnd();
 	}

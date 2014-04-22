@@ -4,24 +4,32 @@ using System.Collections;
 public class MyUnitySingleton : MonoBehaviour {
 	
 	private static MyUnitySingleton instance = null;
-	public static MyUnitySingleton Instance {
+
+	public static MyUnitySingleton Instance 
+	{
 		get { return instance; }
 	}
-	void Awake() {
-		if (instance != null && instance != this) {
+
+	void Awake() 
+	{
+		if (instance != null && instance != this) 
+		{
 			Destroy(this.gameObject);
 			return;
-		} else {
+		} 
+		else 
+		{
 			instance = this;
 		}
 		DontDestroyOnLoad(this.gameObject);
 	}
 
 
-	void Update(){
-		if (Input.GetKey(KeyCode.Escape))
-			Application.Quit();
+	void Update()
+	{
+		if (Input.GetKey (KeyCode.Escape)) 
+		{
+			Application.Quit ();
+		}
 	}
-
-	// any other methods you need
 }

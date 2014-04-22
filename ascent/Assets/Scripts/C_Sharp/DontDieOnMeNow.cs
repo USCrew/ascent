@@ -7,24 +7,16 @@ public class DontDieOnMeNow : MonoBehaviour {
 	public Climbing climb_script; 
 	public MetricManagerScript mms;
 
-
-
 	// Use this for initialization
-	void Start () {
-		
-	}
+	void Start () {}
 	
 	// Update is called once per frame
-	void Update () {
-	
-	}
+	void Update () {}
 
-	void OnTriggerEnter2D(Collider2D collision){
+	void OnTriggerEnter2D(Collider2D collision)
+	{
 		Player.transform.localPosition = climb_script.getCurrentCheckpointPos();
 		Player.rigidbody2D.velocity = Vector3.zero;
 		mms.AddToNumberDeaths();
-
-
 	}
-
 }
