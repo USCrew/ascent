@@ -7,6 +7,7 @@ public class DontDieOnMeNow : MonoBehaviour {
 	public Climbing climb_script; 
 	public MetricManagerScript mms;
 
+
 	// Use this for initialization
 	void Start () {}
 	

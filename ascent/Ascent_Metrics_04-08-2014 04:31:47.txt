@@ -1,3 +1,0 @@
-Current level: level_1
-Total time to finish level: 21.63697
-Number of deaths by player: 2
