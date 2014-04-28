@@ -5,7 +5,8 @@ public class DontDieOnMeNow : MonoBehaviour {
 
 	public GameObject Player;
 	public Climbing climb_script; 
-	public MetricManagerScript mms;
+	public AudioClip die;
+
 
 
 	// Use this for initialization
@@ -18,6 +19,6 @@ public class DontDieOnMeNow : MonoBehaviour {
 	{
 		Player.transform.localPosition = climb_script.getCurrentCheckpointPos();
 		Player.rigidbody2D.velocity = Vector3.zero;
-		mms.AddToNumberDeaths();
+		audio.PlayOneShot(die);
 	}
 }

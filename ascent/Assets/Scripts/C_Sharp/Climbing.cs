@@ -21,6 +21,7 @@ public class Climbing : MonoBehaviour {
 	public bool isClimbing = false;
 	public bool isGrounded = false;
 	public int  whichSide = 0;	//0 is no wall, 1 is left, 2 is right
+	public AudioClip bleep;
 
 	//Animation
 	public Animator anim;
@@ -120,7 +121,7 @@ public class Climbing : MonoBehaviour {
 		else if (Input.GetKey(KeyCode.DownArrow))
 		{
 			/* Limit speed at -6 */
-			if(rigidbody2D.velocity.y < -6)
+			if(rigidbody2D.velocity.y < -6 && isClimbing)
 			{
 					rigidbody2D.velocity = new Vector3(0,-6,0);
 			}
@@ -177,6 +178,12 @@ public class Climbing : MonoBehaviour {
 			Checkpoint_Script deact=(Checkpoint_Script) CurrentCheckpoint.GetComponent(typeof(Checkpoint_Script));
 			deact.deactivate();
 		}
+		if(CurrentCheckpoint != newCurrent)
+		{
+			if(newCurrent.name == "Checkpoint")
+			audio.PlayOneShot(bleep);
+		}
+
 		CurrentCheckpoint = newCurrent;
 		Checkpoint_Script act=(Checkpoint_Script) CurrentCheckpoint.GetComponent(typeof(Checkpoint_Script));
 		act.activate();

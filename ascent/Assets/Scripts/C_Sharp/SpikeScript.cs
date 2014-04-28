@@ -9,7 +9,7 @@ public class SpikeScript : MonoBehaviour {
 	public Sprite Blood2;
 	public Sprite Blood3;
 	private int count = 0;
-	public MetricManagerScript mms;
+	public AudioClip die;
 
 	// Use this for initialization
 	void Start () {}
@@ -33,6 +33,6 @@ public class SpikeScript : MonoBehaviour {
 
 		Player.transform.localPosition = climb_script.getCurrentCheckpointPos();
 		Player.rigidbody2D.velocity = Vector3.zero;
-		mms.AddToNumberDeaths();
+		audio.PlayOneShot(die);
 	}
 }
