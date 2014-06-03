@@ -7,28 +7,23 @@ public class MyUnitySingleton : MonoBehaviour {
 	public AudioClip intro;
 	public AudioClip gameplay;
 
-	public static MyUnitySingleton Instance 
-	{
+	public static MyUnitySingleton Instance {
 		get { return instance; }
 	}
 
-	void Awake() 
-	{
-		if (instance != null && instance != this) 
-		{
+	void Awake() {
+		if (instance != null && instance != this) {
 			Destroy(this.gameObject);
 			return;
 		} 
-		else 
-		{
+		else {
 			instance = this;
 		}
 		DontDestroyOnLoad(this.gameObject);
 	}
 
 
-	void Update()
-	{
+	void Update() {
 
 		//for loading level music
 		if((Application.loadedLevelName == "Red"||
@@ -36,8 +31,7 @@ public class MyUnitySingleton : MonoBehaviour {
 		    Application.loadedLevelName == "Green"||
 		    Application.loadedLevelName == "Blue"||
 		    Application.loadedLevelName =="Purple")
-		   && audio.clip == intro)
-		{
+		   && audio.clip == intro) {
 			audio.clip = gameplay;
 			audio.Play();
 		}
@@ -45,16 +39,13 @@ public class MyUnitySingleton : MonoBehaviour {
 		//for loading intro and endgame music
 		else if((Application.loadedLevelName == "end_screen"||
 		    Application.loadedLevelName == "main_menu")
-		   && audio.clip == gameplay)
-		{
+		   && audio.clip == gameplay) {
 			audio.clip = intro;
 			audio.Play();
 		}
 
-		if (Input.GetKey (KeyCode.Escape)) 
-		{
-			if(Application.loadedLevelName != "main_menu")
-				Application.LoadLevel("main_menu");
+		if (Input.GetKey (KeyCode.Escape)) {
+			if(Application.loadedLevelName != "main_menu") Application.LoadLevel("main_menu");
 			else Application.Quit ();
 		}
 	}

@@ -5,8 +5,6 @@ Project("{A1A9983B-FBFB-713C-E08A-B3961E93F741}") = "ascent", "Assembly-CSharp.c
 EndProject
 Project("{A1A9983B-FBFB-713C-E08A-B3961E93F741}") = "ascent", "Assembly-CSharp-Editor.csproj", "{B069A598-DF77-1FD4-FFA3-3D48809C711A}"
 EndProject
-Project("{A1A9983B-FBFB-713C-E08A-B3961E93F741}") = "ascent", "Assembly-UnityScript.unityproj", "{FC1D949F-50D8-CC35-5CE0-99D9BA815895}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,15 +19,11 @@ Global
 		{B069A598-DF77-1FD4-FFA3-3D48809C711A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B069A598-DF77-1FD4-FFA3-3D48809C711A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B069A598-DF77-1FD4-FFA3-3D48809C711A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FC1D949F-50D8-CC35-5CE0-99D9BA815895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC1D949F-50D8-CC35-5CE0-99D9BA815895}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC1D949F-50D8-CC35-5CE0-99D9BA815895}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC1D949F-50D8-CC35-5CE0-99D9BA815895}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																																																																																								GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																																																																																																									GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

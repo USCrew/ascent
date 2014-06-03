@@ -3,25 +3,28 @@ using System.Collections;
 
 public class Left_Script : MonoBehaviour {
 
-	public GameObject player;
-	public Climbing climb_script;
+	private GameObject player;
 
 	// Use this for initialization
+	void Start () {
+		player = GameObject.FindGameObjectWithTag("Player");
+	}
+
 	void Update () 
 	{
-		Vector3  poop = new Vector3(
+		Vector3  newBoundPos = new Vector3(
 			player.transform.position.x,
 			player.transform.position.y,
 			player.transform.position.z
 			);
-		transform.position = poop;
+		transform.position = newBoundPos;
 	}
 	
 	void OnTriggerStay2D(Collider2D collision)
 	{
 		if(collision.gameObject.tag == "Wall")
 		{
-			climb_script.whichSide = 1;
+			player.GetComponent<Player>().whichSide = 1;
 		}
 	}
 	
@@ -29,7 +32,7 @@ public class Left_Script : MonoBehaviour {
 	{
 		if(collision.tag == "Wall") 
 		{
-			climb_script.whichSide = 0;
+			player.GetComponent<Player>().whichSide = 0;
 		}
 	}
 }

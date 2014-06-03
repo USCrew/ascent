@@ -3,19 +3,20 @@ using System.Collections;
 
 public class PlayerLightManagerScript : MonoBehaviour {
 
-	public GameObject player;
+	private GameObject player;
 
 	// Use this for initialization
-	void Start () {}
+	void Start () {
+		player = GameObject.FindGameObjectWithTag("Player");
+	}
 	
 	// Update is called once per frame
-	void Update () 
-	{
-		Vector3  poop = new Vector3(
+	void Update () {
+		Vector3  lightPos = new Vector3(
 			player.transform.position.x,
 			player.transform.position.y + .4f,
 			player.transform.position.z
 			);
-		transform.position = poop;
+		transform.position = lightPos;
 	}
 }

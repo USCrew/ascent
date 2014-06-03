@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\2DVLS\Core\Editor\Light2DEditor.cs" />
      <Compile Include="Assets\2DVLS\Core\Editor\Light2DMenu.cs" />
+     <None Include="Assets\Maps\Austin.txt" />
      <None Include="Assets\Main Menu Assets\Fonts\minecrafter\Read Me.txt" />
      <None Include="Assets\Main Menu Assets\Fonts\visitor\visitor.txt" />
      <None Include="Assets\Main Menu Assets\Fonts\minecraftia\readme.txt" />
@@ -74,8 +75,6 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{D288E849-3744-4A9E-E8EC-FB7F035ED6BE}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
-    <ProjectReference Include="Assembly-UnityScript.unityproj">
-      <Project>{FC1D949F-50D8-CC35-5CE0-99D9BA815895}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
